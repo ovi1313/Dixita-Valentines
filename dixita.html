@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine for Dixita</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            transition: all 0.5s ease;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        img, video {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <h2>HI :3</h2>
+        <audio controls><source src="audio1.mp3" type="audio/mpeg"></audio>
+        <img src="cat1.jpg" alt="Cute cat">
+        <img src="cat2.jpg" alt="Another cute cat">
+        <br><br>
+        <button onclick="nextStep(1)">Okay</button>
+    </div>
+    
+    <script>
+        let step = 0;
+        function nextStep(next) {
+            const content = document.getElementById("content");
+            step = next;
+            
+            if (step === 1) {
+                content.innerHTML = `<h2>Well, I know this is awkward 😭</h2>
+                                    <audio controls><source src="audio2.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(2)">Continue</button>`;
+            } else if (step === 2) {
+                content.innerHTML = `<h2>Well, let's start with some questions! Do you like Valentine's? 🤔</h2>
+                                    <audio controls><source src="audio3.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(3)">Very Much</button>
+                                    <button onclick="nextStep(3)">Kinda</button>
+                                    <button onclick="nextStep(3)">No</button>
+                                    <button onclick="nextStep(3)">Hate it</button>`;
+            } else if (step === 3) {
+                content.innerHTML = `<h2>Have you celebrated Valentine's before?</h2>
+                                    <audio controls><source src="audio4.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(4)">Many times</button>
+                                    <button onclick="nextStep(4)">A few</button>
+                                    <button onclick="nextStep(4)">Once</button>
+                                    <button onclick="nextStep(4)">Never</button>`;
+            } else if (step === 4) {
+                content.innerHTML = `<h2>Well, I know these distances keep us apart, but my feelings do not alter.</h2>
+                                    <img src="couplecats1.jpg" alt="distances">
+                                    <audio controls><source src="audio5.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(5)">Continue</button>`;
+            } else if (step === 5) {
+                content.innerHTML = `<h2>Since the first day I saw you, I felt something in me.</h2>
+                                    <img src="couplecats1.jpg" alt="dixita">
+                                    <audio controls><source src="audio6.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(6)">Continue</button>`;
+            } else if (step === 6) {
+                content.innerHTML = `<h2>But I stayed, refrained my feelings, and was mean to you lol 😭😭</h2>
+                                    <audio controls><source src="audio7.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(7)">Continue</button>`;
+            } else if (step === 7) {
+                content.innerHTML = `<h2>I fell for you despite the distances. </h2>
+                                    <audio controls><source src="audio8.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(8)">Continue</button>`;
+            } else if (step === 8) {
+                content.innerHTML = `<h2>I don't show it, to not make it awkward, and I know online doesn't work, but I'm happy to have you regardless. 💖</h2>
+                                    <img src="couplecats1.jpg" alt="wolf">
+                                    <audio controls><source src="audio9.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(9)">Okay</button>`;
+            } else if (step === 9) {
+                content.innerHTML = `<h2>I desire you, I adore you. 💕</h2>
+                                    <audio controls><source src="audio10.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(10)">Okay</button>`;
+            } else if (step === 10) {
+                content.innerHTML = `<h2>Leave a rating for me 😁😼</h2>
+                                    <audio controls><source src="audio11.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(11)">2</button>
+                                    <button onclick="nextStep(11)">5</button>
+                                    <button onclick="nextStep(11)">1</button>
+                                    <button onclick="nextStep(11)">0</button>
+                                    <button onclick="nextStep(11)">04</button>`;
+            } else if (step === 11) {
+                content.innerHTML = `<h2>Those digits were your birth dates lol</h2>
+                                    <audio controls><source src="audio12.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(12)">Continue</button>`;
+            } else if (step === 12) {
+                content.innerHTML = `<h2>Well, you know, all these girls are dying to date me 😎</h2>
+                                    <img src="ana.jpg" alt="Ana de Armas">
+                                    <img src="scarlett.jpg" alt="Scarlett Johansson">
+                                    <img src="disha.jpg" alt="Disha Patani">
+                                    <img src="kriti.jpg" alt="Kriti Sanon">
+                                    <audio controls><source src="audio13.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(13)">Continue</button>`;
+            } else if (step === 13) {
+                content.innerHTML = `<h2>But do you know whom I wanna have? Do you know who I would choose over all these given the chance? 🤔</h2>
+                                    <audio controls><source src="audio14.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(14)">Continue</button>`;
+            } else if (step === 14) {
+                content.innerHTML = `<h2>Hint - She plays COD, has a dog and cat, two sisters, likes momo, and supports Barca 😑😒</h2>
+                                    <audio controls><source src="audio15.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(15)">Continue</button>`;
+            } else if (step === 15) {
+                content.innerHTML = `<h2>🫵🫵</h2>
+                                    <img src="mirror.jpg" alt="Mirror pic">
+                                    <audio controls><source src="audio16.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(16)">Continue</button>`;
+            } else if (step === 16) {
+                content.innerHTML = `<h2>You might look like this after 50 years 😭</h2>
+                                    <audio controls><source src="audio10.mp3" type="audio/mpeg"></audio>
+                                    <img src="oldwoman.jpg" alt="Old woman with wrinkles">
+                                    <button onclick="nextStep(17)">Continue</button>`;
+            
+            } else if (step === 17) {
+                content.innerHTML = `<h2>But I would still LOVE YOU ❤️</h2>
+                                    <audio controls><source src="audio11.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(18)">Continue</button>`;
+            } else if (step === 18) {
+                content.innerHTML = `<h2>Dixita Sharma, will you be my online Valentine? 💘</h2>
+                                    <audio controls><source src="audio17.mp3" type="audio/mpeg"></audio>
+                                    <button onclick="nextStep(19)">Yes 💖</button>`;
+            } else if (step === 19) {
+                content.innerHTML = `<h2>I'm waiting on Roblox :p 🎮</h2>
+                                    <audio controls><source src="audio18.mp3" type="audio/mpeg"></audio>
+                                    <img src="couplecats1.jpg" alt="Cute couple cats">
+                                    <img src="couplecats2.jpg" alt="Another cute couple cats">`;
+            }
+        }
+    </script>
+</body>
+</html>
